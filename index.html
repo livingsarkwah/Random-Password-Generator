@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icons8_password_reset.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div id="heading">
+            <h1>Generate a <span class="highlightText">Random Password</span></h1>
+            <p>Never use an insecure password again.</p>
+        </div>
+        <div id="choices">
+            <h3>Customize your password below</h3>
+            <label for="passwordLength" class="textInput">
+                Set the maximum password length
+                <input type="number" id="passwordLength">
+            </label>
+            <div class="exclude">
+                <input type="checkbox" id="excludeNumbers">
+                <label for="excludeNumbers">Exclude Numbers</label>
+            </div>
+            <div class="exclude">
+                <input type="checkbox" id="excludeUpperCase">
+                <label for="excludeUpperCase">Exclude UpperCase</label>
+            </div>
+            <div class="exclude">
+                <input type="checkbox" id="excludeSymbols">
+                <label for="excludeSymbols">Exclude Symbols</label>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="btns">
+                <button id="generateButton" onclick="generatePasswords()">Generate Passwords</button>
+                <button id="resetButton" onclick="resetGenerator()">Reset Generator</button>
+            </div>
+            <div class="outputs">
+                <div class="output">
+                    <p id="output1">sgcvjceub</p>
+                    <div class="copyImgs">
+                        <img id="copyImg1" src="/icons8_documents_1.svg" alt="Copy Icon">
+                        <span id="tooltip1">Copied!</span>
+                    </div>
+                </div>
+                <div class="output">
+                    <p id="output2">sgcvjceub</p>
+                    <div class="copyImgs">
+                        <img id="copyImg2" src="/icons8_documents_1.svg" alt="Copy Icon">
+                        <span id="tooltip2">Copied!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
