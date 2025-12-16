@@ -221,3 +221,24 @@ copyImg1.addEventListener('click', (event) => {
             console.error('Failed to copy text: ', err);
         });
 });
+
+copyImg2.addEventListener('click', (event) => {
+    text = output2.textContent;
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            // Position the tooltip near the text
+            tooltip1.style.right = event.pageX + 'px';
+            tooltip1.style.top = (event.pageY - 30) + 'px';
+            
+            // Show the tooltip
+            tooltip1.classList.add('show');
+
+            // Hide it after 1 second
+            setTimeout(() => {
+                tooltip1.classList.remove('show');
+            }, 1000);
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+});
