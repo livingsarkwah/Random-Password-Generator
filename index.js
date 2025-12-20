@@ -97,8 +97,6 @@ let output1 = document.getElementById("output1");
 let output2 = document.getElementById("output2");
 let copyImg1 = document.getElementById("copyImg1")
 let copyImg2 = document.getElementById("copyImg2")
-let tooltip1 = document.getElementById("tooltip1");
-let tooltip2 = document.getElementById("tooltip2");
 
 output1.textContent = "";
 output2.textContent = "";
@@ -201,42 +199,28 @@ function resetGenerator() {
     
 }
 
-copyImg1.addEventListener('click', (event) => {
+copyImg1.addEventListener('click', () => {
     text = output1.textContent;
     navigator.clipboard.writeText(text)
         .then(() => {
-            // Position the tooltip near the text
-            tooltip1.style.right = event.pageX + 'px';
-            tooltip1.style.top = (event.pageY - 30) + 'px';
-            
-            // Show the tooltip
-            tooltip1.classList.add('show');
-
-            // Hide it after 1 second
+            copyImg1.src = "icons8_checked_checkbox_1.svg"
             setTimeout(() => {
-                tooltip1.classList.remove('show');
-            }, 1000);
+                copyImg1.src = "icons8_documents_1.svg"
+            }, 1500);
         })
         .catch(err => {
             console.error('Failed to copy text: ', err);
         });
 });
 
-copyImg2.addEventListener('click', (event) => {
+copyImg2.addEventListener('click', () => {
     text = output2.textContent;
     navigator.clipboard.writeText(text)
         .then(() => {
-            // Position the tooltip near the text
-            tooltip1.style.right = event.pageX + 'px';
-            tooltip1.style.top = (event.pageY - 30) + 'px';
-            
-            // Show the tooltip
-            tooltip1.classList.add('show');
-
-            // Hide it after 1 second
+            copyImg2.src = "icons8_checked_checkbox_1.svg"
             setTimeout(() => {
-                tooltip1.classList.remove('show');
-            }, 1000);
+                copyImg2.src = "icons8_documents_1.svg"
+            }, 1500);
         })
         .catch(err => {
             console.error('Failed to copy text: ', err);
