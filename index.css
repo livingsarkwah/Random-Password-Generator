@@ -147,32 +147,3 @@ h3 {
     height: 28px;
 }
 
-#tooltip1 {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    background-color: whitesmoke;
-    color: #000e3d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: opacity 0.3s;
-    /* pointer-events: none; */
-}
-
-#tooltip2 {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    background-color: whitesmoke;
-    color: #000e3d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: opacity 0.3s;
-}
-
-.show {
-    opacity: 1;
-    visibility: visible;
-}
