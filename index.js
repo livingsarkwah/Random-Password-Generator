@@ -167,26 +167,26 @@ function generatePasswords() {
     output2.textContent = generatePassword(length, pool);
 }
 
-function generatePasswords() {
-    output1.textContent = "";
-    output2.textContent = "";
+// function generatePasswords() {
+//     output1.textContent = "";
+//     output2.textContent = "";
 
-    let length = Number(passwordLength.value);
-    if (!length || length <= 0) {
-        alert("Please enter a valid password length");
-        return;
-    }
+//     let length = Number(passwordLength.value);
+//     if (!length || length <= 0) {
+//         alert("Please enter a valid password length");
+//         return;
+//     }
 
-    let pool = buildCharacterPool();
+//     let pool = buildCharacterPool();
 
-    if (pool.length === 0) {
-        alert("You excluded all character types!");
-        return;
-    }
+//     if (pool.length === 0) {
+//         alert("You excluded all character types!");
+//         return;
+//     }
 
-    output1.textContent = generatePassword(length, pool);
-    output2.textContent = generatePassword(length, pool);
-}
+//     output1.textContent = generatePassword(length, pool);
+//     output2.textContent = generatePassword(length, pool);
+// }
 
 
 function resetGenerator() {
