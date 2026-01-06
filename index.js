@@ -140,7 +140,7 @@ function buildCharacterPool() {
 function generatePassword(length, pool) {
     let result = "";
     for (let i = 0; i < length; i++) {
-        let rand = Math.floor(Math.random() * 8);
+        let rand = Math.floor(Math.random() * pool.length);
         result += pool[rand];
     }
     return result;
